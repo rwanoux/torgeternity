@@ -14,4 +14,14 @@ Hooks.once("init", function() {
 
     Actors.unregisterSheet("core", ItemSheet);
     Actors.registerSheet("torgeternity", torgeternityActorSheet, {makeDefault: true});
+    Handlebars.registerHelper('concat', function() {
+        /* Helper function for concatenation. For Localization. */
+        var outStr = '';
+        for (var arg in arguments) {
+            if (typeof arguments[arg] != 'object') {
+                outStr += arguments[arg];
+            }
+        }
+        return outStr;
+    });    
 });
