@@ -1,0 +1,30 @@
+{
+  "name": "torgeternity",
+  "version": "1.0.0",
+  "description": "torg eternity system for foundry vtt",
+  "main": "torgeternity.js",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-sourcemaps": "^3.0.0"
+  },
+  "scripts": {
+    "compile": "gulp css",
+    "sass": "gulp sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gmmatt/torgeternity.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gmmatt/torgeternity/issues"
+  },
+  "homepage": "https://github.com/gmmatt/torgeternity#readme"
+}

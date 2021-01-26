@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Martel:wght@400;800&family=Roboto:wght@300;400;500&display=swap");
+@-webkit-keyframes roll {
+  from {
+    transform: scaleX(1.2) scaleY(1.2);
+    transform-origin: 50% 50% 0;
+  }
+  33% {
+    transform: scaleX(0.8) scaleY(0.8);
+    transform-origin: 50% 50% 0;
+  }
+  to {
+    transform: scaleX(0.8) scaleY(0.8);
+    transform-origin: 50% 50% 0;
+  }
+}
+@keyframes roll {
+  from {
+    transform: scaleX(1.2) scaleY(1.2);
+    transform-origin: 50% 50% 0;
+  }
+  33% {
+    transform: scaleX(0.8) scaleY(0.8);
+    transform-origin: 50% 50% 0;
+  }
+  to {
+    transform: scaleX(0.8) scaleY(0.8);
+    transform-origin: 50% 50% 0;
+  }
+}
+
+.actor .window-content {
+  font-family: Berlin2;
+  background-image: url(../images/bgparch.jpg);
+  background-size: 100% 100%;
+}
+
+.actor .window-content input[type="text"]:hover,
+.actor .window-content input[type="number"]:hover,
+.actor .window-content input[type="text"]:focus,
+.actor .window-content input[type="number"]:focus {
+  box-shadow: 0 0 10px #4f523c inset;
+}
+
+.actor .window-content input[type="text"]::-moz-placeholder, .actor .window-content input[type="number"]::-moz-placeholder {
+  color: #293131;
+  text-shadow: 0px 0px 10px black;
+}
+
+.actor .window-content input[type="text"]:-ms-input-placeholder, .actor .window-content input[type="number"]:-ms-input-placeholder {
+  color: #293131;
+  text-shadow: 0px 0px 10px black;
+}
+
+.actor .window-content input[type="text"]::placeholder,
+.actor .window-content input[type="number"]::placeholder {
+  color: #293131;
+  text-shadow: 0px 0px 10px black;
+}
+
+.actor .window-content img {
+  border: none;
+}
+
+.actor .window-content h1 {
+  color: white;
+  border: none;
+  text-align: center;
+  font-family: graveBolt;
+  background-image: url(../images/tab-header.png);
+  background-size: 100% 100%;
+}
+
+.actor .window-content .dark {
+  background-color: rgba(0, 0, 0, 0.561);
+  color: white;
+}
+
+.actor .window-content a.skill-roll:hover,
+.actor .window-content a.skill-roll:active {
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-name: roll;
+  animation-name: roll;
+  text-shadow: 0px 0px 10px #191e58;
+}
+
+.actor .window-content .attributes ul {
+  font-family: Berlin;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.actor .window-content .attributes ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.actor .window-content .attributes ul li input {
+  border: none;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background: url(../images/roundBack.webp);
+  background-size: cover;
+}
+
+.actor .window-content .attributes ul li a {
+  margin-left: auto;
+  text-align: center;
+}
+
+.actor .window-content .skills ul {
+  font-family: Berlin;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.actor .window-content .skills ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid grey;
+}
+
+.actor .window-content .skills ul li input {
+  border: none;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+}
+
+.actor .window-content .skills ul li span {
+  width: 100px;
+  text-align: center;
+}
+
+.actor .window-content .skills ul li a {
+  margin-left: auto;
+  text-align: center;
+}

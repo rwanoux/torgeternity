@@ -1,0 +1,30 @@
+<form class="actor-sheet {{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="systems/torgeternity/images/te-logo.png" class="profile-img" title="TE Logo" />
+
+        <img src="{{actor.img}}" class="profile-img" data-edit="img" title="{{actor.name}}" height="64" width="64" />
+        <h1 class="charname">
+            <input name="name" type="text" value="{{actor.name}}" placeholder="Name" />
+        </h1>
+    </header>
+
+
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="stats" style="vertical-align:center">Stats</a>
+        <a class="item" data-tab="perks">Perks</a>
+        <a class="item" data-tab="gear">Gear</a>
+        <a class="item" data-tab="powers">Powers</a>
+        <a class="item" data-tab="background">Background</a>
+    </nav>
+
+    <secton class="sheet-body">
+
+        <div class="tab " data-group="primary" data-tab="stats">
+            {{> "systems/torgeternity/templates/actors/stormknight/attributes.hbs"}}
+        </div>
+
+        <div class="tab " data-group="primary" data-tab="stats">
+            {{> "systems/torgeternity/templates/actors/stormknight/skills.hbs"}}
+        </div>
+
+</form>

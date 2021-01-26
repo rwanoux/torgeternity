@@ -1,13 +1,18 @@
 # Torg eternity system for Foundry VTT
+
 **Torg Eternity System** for Foundry VTT.  
 
+## RWAN acknowlegement
 
+this is just a WIP branch ; not everuthing is reorganized ; for exemple, i didn't split scss files for actors part, all is  in the same file for the moment. But the changes would be easier to make.
+
+## **the following is the copy of the main readme
 
 ## Installation
+
 **Manifest URL**: https://github.com/gmmatt/torgeternity/releases/latest/download/system.json
 
 For manual installation, use the provided manifest URL in the "*Install System*" popup window while managing game systems.
-
 
 ## License
 
