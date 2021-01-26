@@ -1,0 +1,23 @@
+.window-app .window-content {
+  font-family: $font-primary;
+  background-image: url(../images/bgparch.jpg);
+  color : black;
+
+
+
+}
+
+.rollable {
+  &:hover,
+  &:focus {
+    color: #000;
+    text-shadow: 0 0 10px white;
+    cursor: pointer;
+  }
+
+  
+
+}
+form p.notes{
+    color:rgb(192, 192, 165)
+  }

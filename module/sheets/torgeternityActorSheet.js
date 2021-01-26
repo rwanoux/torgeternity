@@ -14,7 +14,10 @@ export default class torgeternityActorSheet extends ActorSheet {
     }
 
     get template() {
-        return `systems/torgeternity/templates/sheets/${this.actor.data.type}-sheet.hbs`;
+
+        //modified path => one folder per type
+        return `systems/torgeternity/templates/actors/${this.actor.data.type}/main.hbs`;
+        
     }
 
 
