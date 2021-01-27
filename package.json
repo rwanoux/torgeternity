@@ -14,8 +14,10 @@
     "gulp-sourcemaps": "^3.0.0"
   },
   "scripts": {
+    "build": "gulp",
     "compile": "gulp css",
-    "sass": "gulp sass"
+    "watch": "gulp",
+    "gulp": "gulp"
   },
   "repository": {
     "type": "git",
