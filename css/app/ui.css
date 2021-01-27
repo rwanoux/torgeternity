@@ -11,18 +11,18 @@ body {
 }
 
 .app input[type="text"]::-moz-placeholder, .app input[type="number"]::-moz-placeholder {
-  color: rgba(109, 161, 161, 0.794);
+  color: rgba(0, 0, 0, 0.472);
   text-shadow: 0px 0px 10px black;
 }
 
 .app input[type="text"]:-ms-input-placeholder, .app input[type="number"]:-ms-input-placeholder {
-  color: rgba(109, 161, 161, 0.794);
+  color: rgba(0, 0, 0, 0.472);
   text-shadow: 0px 0px 10px black;
 }
 
 .app input[type="text"]::placeholder,
 .app input[type="number"]::placeholder {
-  color: rgba(109, 161, 161, 0.794);
+  color: rgba(0, 0, 0, 0.472);
   text-shadow: 0px 0px 10px black;
 }
 
@@ -61,7 +61,7 @@ body {
 #controls .control-tool.active,
 #controls .scene-control:hover,
 #controls .control-tool:hover {
-  color: #FFF;
+  color: #2d412b;
   border: 1px solid #20393e;
   border-top-color: #20393e;
   border-top-style: solid;
@@ -89,7 +89,7 @@ body {
 
 #controls .scene-control.active,
 #controls .control-tool.active {
-  color: white;
+  color: #2d412b;
   box-shadow: none;
 }
 
@@ -100,6 +100,7 @@ body {
 }
 
 #sidebar {
+  color: white;
   border: 1px solid #000;
   border-top-color: black;
   border-top-style: solid;
