@@ -16,7 +16,7 @@ body {
     z-index: 30;
     input[type="text"]::placeholder,
     input[type="number"]::placeholder {
-        color: rgba(109, 161, 161, 0.794);
+        color: rgba(0, 0, 0, 0.472);
         text-shadow: 0px 0px 10px black;
     }
     option{
@@ -63,7 +63,7 @@ body {
 #controls .control-tool.active,
 #controls .scene-control:hover,
 #controls .control-tool:hover {
-    color: #FFF;
+    color: rgb(45, 65, 43);
     border: 1px solid #20393e;
     border-top-color: #20393e;
     border-top-style: solid;
@@ -92,7 +92,7 @@ body {
 #controls .scene-control.active,
 #controls .control-tool.active
  {
-    color:white;
+    color: rgb(45, 65, 43);;
     box-shadow: none;
 }
 #controls .scene-control:hover,
@@ -107,6 +107,7 @@ body {
 
 //------------SIDEBAR
 #sidebar {
+    color:white;
     border: 1px solid #000;
     border-top-color: rgb(0, 0, 0);
     border-top-style: solid;
