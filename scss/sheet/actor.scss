@@ -23,6 +23,7 @@
         transform-origin: 50% 50% 0;
     }
 }
+// all globals for actors
 
 .actor .window-content {
 
@@ -68,7 +69,7 @@
 
 
     }
-
+// -----specific for attributs block-------this could be in a different file with an include property
     .attributes {
         
         ul {
@@ -100,6 +101,8 @@
             }
         }
     }
+    // -----specific for skills block-------this could be in a different file with an include property
+
     .skills{
         ul {
             font-family: Berlin;

@@ -10,6 +10,8 @@ import {preloadTemplates} from "./module/preloadTemplates.js";
 Hooks.once("init", function() {
     console.log("torgeternity | Initializing Torg Eternity System");
 
+//-------moving to a n imported module ?? ./modules/config.js
+
     CONFIG.torgeternity = torgeternity;
     CONFIG.Item.entityClass = torgeternityItem;
     CONFIG.Actor.entityClass = torgeternityActor;
@@ -21,10 +23,13 @@ Hooks.once("init", function() {
     Actors.registerSheet("torgeternity", torgeternityActorSheet, {makeDefault: true});
     
     
-    //preloading handlebars templates
+//----------preloading handlebars templates for partials sheet 
     preloadTemplates();
 
 });
+
+
+//----all this could be draft in another imported module ?? maybe like ./modules/handlebarsHelpers.js
 
 Handlebars.registerHelper("concatSkillValue", function(skillName){
     var skillValue = "{{data.skills." + skillName + ".value}}";

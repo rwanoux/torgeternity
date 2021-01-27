@@ -18,16 +18,17 @@
 @import 'global/grid';
 @import 'global/flex';
 
+
+
 /* Styles limited to torg sheets */
-
-
-
 @import 'sheet/actor';
 @import 'sheet/item';
 @import 'app/ui';
 @import 'app/chat';
 
 
+
+//---global styling
 body {
     font-family: $font-primary;
     
