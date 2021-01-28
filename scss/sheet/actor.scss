@@ -97,200 +97,207 @@
 
 
 
-//--all elements in character sheet
-font-family: Berlin2;
-font-size: 0.9em;
+    //--all elements in character sheet
+    font-family: Berlin2;
+    font-size: 0.9em;
 
 
-input[type="text"]:hover,
-input[type="number"]:hover,
-input[type="text"]:focus,
-input[type="number"]:focus {
-    box-shadow: 0 0 10px rgb(79, 82, 60) inset;
-}
+    input[type="text"]:hover,
+    input[type="number"]:hover,
+    input[type="text"]:focus,
+    input[type="number"]:focus {
+        box-shadow: 0 0 10px rgb(79, 82, 60) inset;
+    }
 
-input[type="text"]::placeholder,
-input[type="number"]::placeholder {
+    input[type="text"]::placeholder,
+    input[type="number"]::placeholder {
 
-    color: rgb(41, 49, 49);
-    text-shadow: 0px 0px 10px black;
-}
-
-
-img {
-    border: none;
-    flex: 0 0 60px;
-    height: auto;
+        color: rgb(41, 49, 49);
+        text-shadow: 0px 0px 10px black;
+    }
 
 
-}
+    img {
+        border: none;
+        flex: 0 0 60px;
+        height: auto;
 
 
-h1 {
-    color: black;
-    border: none;
-    text-align: center;
-    font-family: graveBolt;
-    background-size: 100% 100%;
-    border: solid #f1f3de4f 5px;
-    border-image: url(../images/separator.png);
-    border-image-slice: 0% 0% 100%;
+    }
 
 
-    text-shadow: 0px 0px 15px black;
-
-    input {
-        color: white;
+    h1 {
+        color: black;
         border: none;
         text-align: center;
         font-family: graveBolt;
-        text-shadow: 0px 0px 15px black
-    }
-}
+        background-size: 100% 100%;
+        border: solid #f1f3de4f 5px;
+        border-image: url(../images/separator.png);
+        border-image-slice: 0% 0% 100%;
 
 
+        text-shadow: 0px 0px 15px black;
 
-.dark {
-    background-color: rgba(0, 0, 0, 0.561);
-    color: white;
-}
-
-a.skill-roll:hover,
-a.skill-roll:active {
-    animation-duration: 0.3s;
-    animation-name: roll;
-    text-shadow: 0px 0px 10px rgb(25, 30, 88);
-
-
-}
-
-//---------------character image
-.char_image {
-    border: solid 5px;
-    border-image: url(../images/separator.png) 20  round;
-    grid-column: 5/7;
-    grid-row: 3/4;
-    transition: all 0.6s cubic-bezier(1, 0, 0, 1) 0.1s;
-
-}
-.char_image:hover{
-    transform:scale(1.1);
-}
-
-//---------------header
-
-
-.sheet-header {
-    grid-column: 1/9;
-    grid-row: 1/2;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-    div {
-        padding: 5px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    input[type="number"] {
-        border: none;
-        text-align: center;
-        width: 30px;
-        height: 30px;
-        border-radius: 15px;
-        background: url(../images/roundBack.webp);
-        background-size: cover
-    }
-}
-
-// -----specific for attributs block-------this could be in a different file with an include property
-.attributes {
-    grid-column: 1/8;
-    grid-row: 2/3;
-
-
-    ul {
-        font-family: Berlin;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-
-        li.attribut-block {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-
-            input[type="number"] {
-                border: none;
-                text-align: center;
-                width: 30px;
-                height: 30px;
-                border-radius: 15px;
-                background: url(../images/roundBack.webp);
-                background-size: cover
-            }
-
-            a {
-                margin-left: auto;
-                text-align: center
-            }
+        input {
+            color: white;
+            border: none;
+            text-align: center;
+            font-family: graveBolt;
+            text-shadow: 0px 0px 15px black
         }
     }
 
-}
-
-// -----specific for skills block-------this could be in a different file with an include property
-
-.skills {
-
-    grid-column: 1/5;
-    grid-row: 3/10;
-    overflow: scroll;
-    max-height: 300px;
 
 
-    ul {
+    .dark {
+        background-color: rgba(0, 0, 0, 0.561);
+        color: white;
+    }
 
-        font-family: Berlin;
+    a.skill-roll:hover,
+    a.skill-roll:active {
+        animation-duration: 0.3s;
+        animation-name: roll;
+        text-shadow: 0px 0px 10px rgb(25, 30, 88);
+
+
+    }
+
+    //---------------character image
+    .char_image {
+        border: solid 5px;
+        border-image: url(../images/separator.png) 20 round;
+        grid-column: 5/7;
+        grid-row: 3/4;
+        transition: all 0.6s cubic-bezier(1, 0, 0, 1) 0.1s;
+
+    }
+
+    .char_image:hover {
+        transform: scale(1.1);
+    }
+
+    //---------------header
+
+
+    .sheet-header {
+        grid-column: 1/9;
+        grid-row: 1/2;
+
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+        flex-direction: row;
+        justify-content: center;
 
-        li {
+        div {
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        input[type="number"] {
+            border: none;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+            background: url(../images/roundBack.webp);
+            background-size: cover
+        }
+    }
+
+    // -----specific for attributs block-------this could be in a different file with an include property
+    .attributes {
+        grid-column: 1/8;
+        grid-row: 2/3;
+
+
+        ul {
+            font-family: Berlin;
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            border-bottom: 1px solid grey;
 
-            input {
-                border: none;
-                text-align: center;
-                width: 18px;
-                height: 18px;
+            li.attribut-block {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
 
+                input[type="number"] {
+                    border: none;
+                    text-align: center;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 15px;
+                    background: url(../images/roundBack.webp);
+                    background-size: cover
+                }
 
-            }
-
-            span {
-                width: 90%;
-                text-align: center;
-            }
-
-            a {
-                margin-left: auto;
-                text-align: center
+                a {
+                    margin-left: auto;
+                    text-align: center
+                }
             }
         }
+
     }
 
-}
+    // -----specific for skills block-------this could be in a different file with an include property
 
-.perks {
-    grid-column: 7/9;
-    grid-row: 3/5;
-}
+    .skills {
+
+        grid-column: 1/5;
+        grid-row: 3/10;
+        overflow: scroll;
+        max-height: 300px;
+
+
+        ul {
+
+            font-family: Berlin;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            li {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                border-bottom: 1px solid grey;
+
+                input {
+                    border: none;
+                    text-align: center;
+                    width: 18px;
+                    height: 18px;
+
+
+                }
+
+                span {
+                    width: 90%;
+                    text-align: center;
+                }
+
+                a {
+                    margin-left: auto;
+                    text-align: center
+                }
+            }
+        }
+
+    }
+
+    // -----specific for perks block-------this could be in a different file with an include property
+    .perks {
+        grid-column: 5/9;
+        grid-row: 4/6;
+    }
+
+    .defense {
+        grid-column: 7/9;
+        grid-row: 3/4;
+    }
 }
