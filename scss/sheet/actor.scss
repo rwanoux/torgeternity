@@ -31,11 +31,10 @@
 }
 
 .actor .window-content .actor-sheet {
-
-
-
+    
+ //defining grid container for each tab
     .tab[data-tab].active {
-        //defining grid container
+       
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(10, minmax(25px, 115px));
