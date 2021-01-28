@@ -31,7 +31,10 @@
 }
 
 .actor .window-content .actor-sheet {
-    div.tabs {
+
+
+
+    .tab[data-tab].active {
         //defining grid container
         display: grid;
         grid-template-columns: repeat(8, 1fr);
@@ -44,6 +47,8 @@
         border: 5px solid;
         border-image: url('../images/tab-header.png') 50;
     }
+
+
 
 
     div.block {

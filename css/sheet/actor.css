@@ -38,7 +38,7 @@
   font-size: 0.9em;
 }
 
-.actor .window-content .actor-sheet div.tabs {
+.actor .window-content .actor-sheet .tab[data-tab].active {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(10, minmax(25px, 115px));
