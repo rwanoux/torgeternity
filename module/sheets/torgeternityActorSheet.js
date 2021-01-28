@@ -7,7 +7,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             classes: ["torgeternity", "sheet", "actor"],
             width: 760,
             height: 900,
-            tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats"}],
+            tabs: [{navSelector: ".sheet-tabs", contentSelector: ".main", initial: "stats"}],
             scrollY: [".stats", ".perks", ".gear", ".powers", "background"],
             dragdrop: [{dragSelector: ".item-list .item", dropSelector: null}]
         });
