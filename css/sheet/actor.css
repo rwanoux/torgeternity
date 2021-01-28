@@ -38,7 +38,7 @@
   font-size: 0.9em;
 }
 
-.actor .window-content .actor-sheet div.tab {
+.actor .window-content .actor-sheet div.tabs {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(10, minmax(25px, 115px));
@@ -65,9 +65,9 @@
   box-shadow: 2px 2px 15px black;
 }
 
-.actor .window-content .actor-sheet nav.tab {
+.actor .window-content .actor-sheet nav.tabs {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: relative;
   text-align: center;
   border: none;
@@ -76,7 +76,7 @@
   left: 50%;
 }
 
-.actor .window-content .actor-sheet nav.tab a.item {
+.actor .window-content .actor-sheet nav.tabs a.item {
   min-width: 100px;
   transition: all 0.1s cubic-bezier(1, 0, 0, 1) 0.1s;
   color: white;
@@ -85,8 +85,8 @@
   transform: translateX(-300px);
 }
 
-.actor .window-content .actor-sheet nav.tab a.item:hover,
-.actor .window-content .actor-sheet nav.tab a.item:active {
+.actor .window-content .actor-sheet nav.tabs a.item:hover,
+.actor .window-content .actor-sheet nav.tabs a.item:active {
   transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
   transform-origin: 50% 50% 0;
   text-shadow: 0 0 10px #10813f;
@@ -95,7 +95,7 @@
   z-index: 0;
 }
 
-.actor .window-content .actor-sheet nav.tab a.item.active {
+.actor .window-content .actor-sheet nav.tabs a.item.active {
   transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
   transform-origin: 50% 50% 0;
   background-image: url(../images/active_tab_back.png);

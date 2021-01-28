@@ -31,7 +31,7 @@
 }
 
 .actor .window-content .actor-sheet {
-    div.tab {
+    div.tabs {
         //defining grid container
         display: grid;
         grid-template-columns: repeat(8, 1fr);
@@ -62,10 +62,11 @@
     }
 
 
+
     //---------tabs selectors
-    nav.tab {
+    nav.tabs {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         position: relative;
         text-align: center;
 
