@@ -8,26 +8,26 @@
         <a class="item" data-tab="background">Background</a>
     </nav>
 
-    <header class="sheet-header">
+    <header class="sheet-header block">
         {{> "systems/torgeternity/templates/actors/stormknight/header.hbs"}}
 
     </header>
 
-    <div class="attributes " data-group="primary" data-tab="stats">
+    <div class="attributes block " data-group="primary" data-tab="stats">
         {{> "systems/torgeternity/templates/actors/stormknight/attributes.hbs"}}
     </div>
 
-    <div class="skills " data-group="primary" data-tab="stats">
+    <div class="skills block" data-group="primary" data-tab="stats">
         {{> "systems/torgeternity/templates/actors/stormknight/skills.hbs"}}
     </div>
     <div class="char_image">
         <img src="{{actor.img}}" class="profile-img" data-edit="img" title="{{actor.name}}" />
 
     </div>
-    <div class="perks">
+    <div class="perks block">
         {{> "systems/torgeternity/templates/actors/stormknight/perks.hbs"}}
     </div>
-     <div class="defense">
+     <div class="defense block">
         {{> "systems/torgeternity/templates/actors/stormknight/defense.hbs"}}
     </div>
 </form>
