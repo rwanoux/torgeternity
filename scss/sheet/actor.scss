@@ -164,13 +164,21 @@ a.skill-roll:active {
 
 }
 
-//---------------header
-
+//---------------character image
 .char_image {
-
+    border: solid 5px;
+    border-image: url(../images/separator.png) 20  round;
     grid-column: 5/7;
     grid-row: 3/4;
+    transition: all 0.6s cubic-bezier(1, 0, 0, 1) 0.1s;
+
 }
+.char_image:hover{
+    transform:scale(1.1);
+}
+
+//---------------header
+
 
 .sheet-header {
     grid-column: 1/9;

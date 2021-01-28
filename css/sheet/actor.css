@@ -153,8 +153,16 @@
 }
 
 .actor .window-content .actor-sheet .char_image {
+  border: solid 5px;
+  -o-border-image: url(../images/separator.png) 20 round;
+  border-image: url(../images/separator.png) 20 round;
   grid-column: 5/7;
   grid-row: 3/4;
+  transition: all 0.6s cubic-bezier(1, 0, 0, 1) 0.1s;
+}
+
+.actor .window-content .actor-sheet .char_image:hover {
+  transform: scale(1.1);
 }
 
 .actor .window-content .actor-sheet .sheet-header {
