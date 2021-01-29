@@ -14,6 +14,15 @@
   src: url("../fonts/Berlin Email Bold.ttf");
 }
 
+div.actor ::-webkit-scrollbar {
+  background: transparent none;
+}
+
+div.actor ::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
 /* Global styles */
 .grid,
 .grid-2col {
@@ -97,7 +106,7 @@
 
 /* foundry parts */
 .window-app .window-content {
-  font-family: "Berlin";
+  font-family: Berlin;
   background-image: url(../images/bgparch.jpg);
   color: black;
 }
@@ -109,7 +118,7 @@
 }
 
 .window-app .window-content form p.notes {
-  color: #c0c0a5;
+  color: rgba(0, 0, 0, 0.65);
 }
 
 body {
@@ -165,56 +174,52 @@ body {
 #controls .control-tool,
 #controls .scene-control,
 #controls .control-tool {
-  background: url(../images/bgparch.jpg);
+  background: url(../images/bg-sheet.png);
   border: 1px solid black;
-  color: #414141;
+  color: grey;
   box-shadow: none;
 }
 
-#controls .scene-control.active,
-#controls .control-tool.active,
+#controls .scene-control,
+#controls .control-tool,
 #controls .scene-control:hover,
 #controls .control-tool:hover {
-  color: #2d412b;
-  border: 1px solid #20393e;
-  border-top-color: #20393e;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-right-color: #20393e;
-  border-right-style: solid;
-  border-right-width: 1px;
-  border-bottom-color: black;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-left-color: #20393e;
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-image-source: initial;
-  border-image-slice: initial;
-  border-image-width: initial;
-  border-image-outset: initial;
-  border-image-repeat: initial;
-  border-bottom: 1px solid black;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: black;
+  color: grey;
+  background-image: url(../images/bg-sheet.png);
+  background-size: cover;
+  border: none;
   box-shadow: 0 0 10px black;
+}
+
+#controls .scene-control .fa, #controls .scene-control .fas,
+#controls .control-tool .fa,
+#controls .control-tool .fas,
+#controls .scene-control:hover .fa,
+#controls .scene-control:hover .fas,
+#controls .control-tool:hover .fa,
+#controls .control-tool:hover .fas {
+  font-weight: 600;
+  font-size: 16px;
 }
 
 #controls .scene-control.active,
 #controls .control-tool.active {
-  color: #2d412b;
+  color: black;
+  text-shadow: black 0px 0px 15px;
   box-shadow: none;
+  border: none;
 }
 
 #controls .scene-control:hover,
 #controls .control-tool:hover {
   box-shadow: 0 0 10px black;
-  color: #20393e;
+  color: #1d353a;
 }
 
 #sidebar {
   color: white;
+  background-image: url(../images/thunder_black.png);
+  background-size: contain;
   border: 1px solid #000;
   border-top-color: black;
   border-top-style: solid;
@@ -269,27 +274,31 @@ body {
   }
 }
 
-.actor .window-content .actor-sheet {
+.torgeternity.actor .window-content {
+  width: 110%;
+  height: 110%;
+  background-image: url(../images/bg-sheet.png);
+  background-size: cover;
+  position: relative;
+  top: -2%;
+  left: -5%;
+  padding: 5%;
   font-family: Berlin2;
   font-size: 0.9em;
 }
 
-.actor .window-content .actor-sheet .tab[data-tab].active {
+.torgeternity.actor .window-content .actor-sheet .tab[data-tab].active {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(10, minmax(25px, 115px));
   grid-gap: 5px;
   justify-content: center;
-  background-image: url(../images/bgparch.jpg);
-  background-size: contain;
-  border: 5px solid;
-  -o-border-image: url("../images/tab-header.png") 50;
-  border-image: url("../images/tab-header.png") 50;
+  padding: 2%;
 }
 
-.actor .window-content .actor-sheet div.block {
+.torgeternity.actor .window-content .actor-sheet div.block {
   border: solid 4px;
-  -o-border-image: url(../images/separator.png) 20 round;
+  -o-border-image: url(../images/separator.png);
   border-image: url(../images/separator.png);
   border-image-slice: 50;
   box-shadow: 2px 2px 15px #9e9686;
@@ -297,22 +306,33 @@ body {
   overflow: scroll;
 }
 
-.actor .window-content .actor-sheet div.block:hover {
+.torgeternity.actor .window-content .actor-sheet div.block:hover {
   box-shadow: 2px 2px 15px black;
 }
 
-.actor .window-content .actor-sheet nav.tabs {
+.torgeternity.actor .window-content .actor-sheet nav.tabs {
+  /*
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            text-align: center;
+
+            border: none;
+            position: absolute;
+            bottom: 0.2%;
+            left: 50%;
+*/
   display: flex;
   flex-direction: column;
-  position: relative;
   text-align: center;
   border: none;
   position: absolute;
-  bottom: 0.2%;
-  left: 50%;
+  top: 400px;
+  right: -5px;
+  transform: rotateZ(90deg);
 }
 
-.actor .window-content .actor-sheet nav.tabs a.item {
+.torgeternity.actor .window-content .actor-sheet a.item {
   min-width: 100px;
   transition: all 0.1s cubic-bezier(1, 0, 0, 1) 0.1s;
   color: white;
@@ -321,8 +341,8 @@ body {
   transform: translateX(-300px);
 }
 
-.actor .window-content .actor-sheet nav.tabs a.item:hover,
-.actor .window-content .actor-sheet nav.tabs a.item:active {
+.torgeternity.actor .window-content .actor-sheet a.item:hover,
+.torgeternity.actor .window-content .actor-sheet a.item:active {
   transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
   transform-origin: 50% 50% 0;
   text-shadow: 0 0 10px #10813f;
@@ -331,7 +351,7 @@ body {
   z-index: 0;
 }
 
-.actor .window-content .actor-sheet nav.tabs a.item.active {
+.torgeternity.actor .window-content .actor-sheet a.item.active {
   transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
   transform-origin: 50% 50% 0;
   background-image: url(../images/active_tab_back.png);
@@ -339,36 +359,36 @@ body {
   z-index: 100;
 }
 
-.actor .window-content .actor-sheet input[type="text"]:hover,
-.actor .window-content .actor-sheet input[type="number"]:hover,
-.actor .window-content .actor-sheet input[type="text"]:focus,
-.actor .window-content .actor-sheet input[type="number"]:focus {
+.torgeternity.actor .window-content input[type="text"]:hover,
+.torgeternity.actor .window-content input[type="number"]:hover,
+.torgeternity.actor .window-content input[type="text"]:focus,
+.torgeternity.actor .window-content input[type="number"]:focus {
   box-shadow: 0 0 10px #4f523c inset;
 }
 
-.actor .window-content .actor-sheet input[type="text"]::-moz-placeholder, .actor .window-content .actor-sheet input[type="number"]::-moz-placeholder {
+.torgeternity.actor .window-content input[type="text"]::-moz-placeholder, .torgeternity.actor .window-content input[type="number"]::-moz-placeholder {
   color: #293131;
   text-shadow: 0px 0px 10px black;
 }
 
-.actor .window-content .actor-sheet input[type="text"]:-ms-input-placeholder, .actor .window-content .actor-sheet input[type="number"]:-ms-input-placeholder {
+.torgeternity.actor .window-content input[type="text"]:-ms-input-placeholder, .torgeternity.actor .window-content input[type="number"]:-ms-input-placeholder {
   color: #293131;
   text-shadow: 0px 0px 10px black;
 }
 
-.actor .window-content .actor-sheet input[type="text"]::placeholder,
-.actor .window-content .actor-sheet input[type="number"]::placeholder {
+.torgeternity.actor .window-content input[type="text"]::placeholder,
+.torgeternity.actor .window-content input[type="number"]::placeholder {
   color: #293131;
   text-shadow: 0px 0px 10px black;
 }
 
-.actor .window-content .actor-sheet img {
+.torgeternity.actor .window-content img {
   border: none;
   flex: 0 0 60px;
   height: auto;
 }
 
-.actor .window-content .actor-sheet h2 {
+.torgeternity.actor .window-content h2 {
   color: black;
   border: none;
   text-align: center;
@@ -376,7 +396,7 @@ body {
   text-shadow: 0px 0px 15px black;
 }
 
-.actor .window-content .actor-sheet h1 {
+.torgeternity.actor .window-content h1 {
   color: black;
   border: none;
   text-align: center;
@@ -384,7 +404,7 @@ body {
   text-shadow: 0px 0px 15px black;
 }
 
-.actor .window-content .actor-sheet h1 input {
+.torgeternity.actor .window-content h1 input {
   color: white;
   border: none;
   text-align: center;
@@ -392,13 +412,13 @@ body {
   text-shadow: 0px 0px 15px black;
 }
 
-.actor .window-content .actor-sheet .dark {
+.torgeternity.actor .window-content .dark {
   background-color: rgba(0, 0, 0, 0.561);
   color: white;
 }
 
-.actor .window-content .actor-sheet a.skill-roll:hover,
-.actor .window-content .actor-sheet a.skill-roll:active {
+.torgeternity.actor .window-content a.skill-roll:hover,
+.torgeternity.actor .window-content a.skill-roll:active {
   -webkit-animation-duration: 0.3s;
   animation-duration: 0.3s;
   -webkit-animation-name: roll;
@@ -406,7 +426,7 @@ body {
   text-shadow: 0px 0px 10px #191e58;
 }
 
-.actor .window-content .actor-sheet .char_image {
+.torgeternity.actor .window-content .char_image {
   border: solid 5px;
   -o-border-image: url(../images/separator.png) 20 round;
   border-image: url(../images/separator.png) 20 round;
@@ -415,11 +435,11 @@ body {
   transition: all 0.6s cubic-bezier(1, 0, 0, 1) 0.1s;
 }
 
-.actor .window-content .actor-sheet .char_image:hover {
+.torgeternity.actor .window-content .char_image:hover {
   transform: scale(1.1);
 }
 
-.actor .window-content .actor-sheet .sheet-header {
+.torgeternity.actor .window-content .sheet-header {
   grid-column: 1/9;
   grid-row: 1/2;
   display: flex;
@@ -427,23 +447,23 @@ body {
   justify-content: center;
 }
 
-.actor .window-content .actor-sheet .sheet-header img {
+.torgeternity.actor .window-content .sheet-header img {
   max-width: 70%;
   height: auto;
 }
 
-.actor .window-content .actor-sheet .sheet-header select {
+.torgeternity.actor .window-content .sheet-header select {
   border: none;
   border-bottom: solid;
   max-height: 20px;
 }
 
-.actor .window-content .actor-sheet .sheet-header select:active,
-.actor .window-content .actor-sheet .sheet-header select:focus {
+.torgeternity.actor .window-content .sheet-header select:active,
+.torgeternity.actor .window-content .sheet-header select:focus {
   box-shadow: 0 0 5px #0062ff;
 }
 
-.actor .window-content .actor-sheet .sheet-header div {
+.torgeternity.actor .window-content .sheet-header div {
   max-height: 0.4em;
   display: flex;
   flex-direction: column;
@@ -451,7 +471,7 @@ body {
   margin-right: 10px;
 }
 
-.actor .window-content .actor-sheet .sheet-header input[type="number"] {
+.torgeternity.actor .window-content .sheet-header input[type="number"] {
   border: none;
   text-align: center;
   width: 30px;
@@ -461,26 +481,26 @@ body {
   background-size: cover;
 }
 
-.actor .window-content .actor-sheet .attributes {
+.torgeternity.actor .window-content .attributes {
   grid-column: 1/7;
   grid-row: 2/3;
 }
 
-.actor .window-content .actor-sheet .attributes ul {
+.torgeternity.actor .window-content .attributes ul {
   font-family: Berlin;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
-.actor .window-content .actor-sheet .attributes ul li.attribut-block {
+.torgeternity.actor .window-content .attributes ul li.attribut-block {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 
-.actor .window-content .actor-sheet .attributes ul li.attribut-block input[type="number"] {
+.torgeternity.actor .window-content .attributes ul li.attribut-block input[type="number"] {
   border: none;
   text-align: center;
   width: 30px;
@@ -490,63 +510,63 @@ body {
   background-size: cover;
 }
 
-.actor .window-content .actor-sheet .attributes ul li.attribut-block a {
+.torgeternity.actor .window-content .attributes ul li.attribut-block a {
   margin-left: auto;
   text-align: center;
 }
 
-.actor .window-content .actor-sheet .skills {
+.torgeternity.actor .window-content .skills {
   grid-column: 1/5;
   grid-row: 3/7;
   overflow: scroll;
 }
 
-.actor .window-content .actor-sheet .skills ul {
+.torgeternity.actor .window-content .skills ul {
   font-family: Berlin;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-.actor .window-content .actor-sheet .skills ul li {
+.torgeternity.actor .window-content .skills ul li {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   border-bottom: 1px solid grey;
 }
 
-.actor .window-content .actor-sheet .skills ul li input {
+.torgeternity.actor .window-content .skills ul li input {
   border: none;
   text-align: center;
   width: 18px;
   height: 18px;
 }
 
-.actor .window-content .actor-sheet .skills ul li span {
+.torgeternity.actor .window-content .skills ul li span {
   width: 90%;
   text-align: center;
 }
 
-.actor .window-content .actor-sheet .skills ul li a {
+.torgeternity.actor .window-content .skills ul li a {
   margin-left: auto;
   text-align: center;
 }
 
-.actor .window-content .actor-sheet .perks {
+.torgeternity.actor .window-content .perks {
   grid-column: 5/9;
   grid-row: 5/7;
 }
 
-.actor .window-content .actor-sheet .defense {
+.torgeternity.actor .window-content .defense {
   grid-column: 7/9;
   grid-row: 2/5;
 }
 
-.actor .window-content .actor-sheet .defense input {
+.torgeternity.actor .window-content .defense input {
   width: 25%;
 }
 
-.actor .window-content .actor-sheet .weapons {
+.torgeternity.actor .window-content .weapons {
   grid-column: 1/9;
   grid-row: 7/9;
 }

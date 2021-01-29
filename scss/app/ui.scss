@@ -51,54 +51,42 @@ body {
 #controls .control-tool,
 #controls .scene-control,
 #controls .control-tool {
-    background: url(../images/bgparch.jpg);
+    background: url(../images/bg-sheet.png);
     border: 1px solid black;
-    color: rgb(65, 65, 65);
+    color: grey;
     box-shadow: none;
 
 }
 
 
-#controls .scene-control.active,
-#controls .control-tool.active,
+#controls .scene-control,
+#controls .control-tool,
 #controls .scene-control:hover,
 #controls .control-tool:hover {
-    color: rgb(45, 65, 43);
-    border: 1px solid #20393e;
-    border-top-color: #20393e;
-    border-top-style: solid;
-    border-top-width: 1px;
-    border-right-color: #20393e;
-    border-right-style: solid;
-    border-right-width: 1px;
-    border-bottom-color: black;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-left-color: #20393e;
-    border-left-style: solid;
-    border-left-width: 1px;
-    border-image-source: initial;
-    border-image-slice: initial;
-    border-image-width: initial;
-    border-image-outset: initial;
-    border-image-repeat: initial;
-    border-bottom: 1px solid black;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: black;
+    color: grey;
+   background-image: url(../images/bg-sheet.png);
+   background-size:cover;
+   border: none;
     box-shadow: 0 0 10px black;
+    .fa, .fas {
+        font-weight: 600;
+        font-size: 16px;
+    }
+
 }
 
 #controls .scene-control.active,
 #controls .control-tool.active
  {
-    color: rgb(45, 65, 43);;
+    color: black;
+    text-shadow:black 0px 0px 15px ;
     box-shadow: none;
+    border :none;
 }
 #controls .scene-control:hover,
 #controls .control-tool:hover{
     box-shadow: 0 0 10px black;
-    color: #20393e
+    color: #1d353a
 
 }
 
@@ -108,6 +96,8 @@ body {
 //------------SIDEBAR
 #sidebar {
     color:white;
+    background-image:url(../images/thunder_black.png);
+    background-size:contain;
     border: 1px solid #000;
     border-top-color: rgb(0, 0, 0);
     border-top-style: solid;
