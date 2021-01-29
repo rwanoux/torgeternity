@@ -28,11 +28,6 @@
   }
 }
 
-.window-app section.window-content {
-  margin: 0px;
-  padding: 0px;
-}
-
 .actor .window-content .actor-sheet {
   font-family: Berlin2;
   font-size: 0.9em;
