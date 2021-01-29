@@ -27,18 +27,20 @@
 // ----------------------------------------all globals for actors
 .torgeternity.actor .window-content {
 
-    //----------scrollbar
+  
 
 
 
-    width: 110%;
-    height: 110%;
+    width: calc(100% + 100px);
     background-image: url(../images/bg-sheet.png);
     background-size: cover;
     position: relative;
-    top: -2%;
-    left: -5%;
+    top: -15px;
+    left: -45px;
     padding: 5%;
+    font-family: Palatino;
+    font-size: 0.9em;
+}
 
 
 
@@ -52,7 +54,6 @@
             grid-template-rows: repeat(10, minmax(25px, 115px));
             grid-gap: 5px;
             justify-content: center;
-            padding: 2%
         }
 
 
@@ -96,6 +97,7 @@
             top: 400px;
             right: -5px;
             transform: rotateZ(90deg);
+            font-family:Berlin
         }
 
         a.item {
@@ -130,7 +132,7 @@
             transform: translateX(-300px);
             z-index: 100;
         }
-    }
+    
 
 
 
@@ -228,7 +230,7 @@
 
     .sheet-header {
         img {
-            max-width: 70%;
+            max-width: 100%;
             height: auto;
         }
 
@@ -249,7 +251,7 @@
 
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
 
         div {
             max-height: 0.4em;

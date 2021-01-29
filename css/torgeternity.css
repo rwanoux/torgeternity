@@ -14,6 +14,16 @@
   src: url("../fonts/Berlin Email Bold.ttf");
 }
 
+@font-face {
+  font-family: "Friz";
+  src: url("../fonts/Friz Quadrata TT Regular.ttf");
+}
+
+@font-face {
+  font-family: "Palatino";
+  src: url("../fonts/palatino_linotype.ttf");
+}
+
 div.actor ::-webkit-scrollbar {
   background: transparent none;
 }
@@ -275,28 +285,31 @@ body {
 }
 
 .torgeternity.actor .window-content {
-  width: 110%;
-  height: 110%;
+  width: calc(100% + 100px);
   background-image: url(../images/bg-sheet.png);
   background-size: cover;
   position: relative;
-  top: -2%;
-  left: -5%;
+  top: -15px;
+  left: -45px;
   padding: 5%;
+  font-family: Palatino;
+  font-size: 0.9em;
+}
+
+.actor-sheet {
   font-family: Berlin2;
   font-size: 0.9em;
 }
 
-.torgeternity.actor .window-content .actor-sheet .tab[data-tab].active {
+.actor-sheet .tab[data-tab].active {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(10, minmax(25px, 115px));
   grid-gap: 5px;
   justify-content: center;
-  padding: 2%;
 }
 
-.torgeternity.actor .window-content .actor-sheet div.block {
+.actor-sheet div.block {
   border: solid 4px;
   -o-border-image: url(../images/separator.png);
   border-image: url(../images/separator.png);
@@ -306,11 +319,11 @@ body {
   overflow: scroll;
 }
 
-.torgeternity.actor .window-content .actor-sheet div.block:hover {
+.actor-sheet div.block:hover {
   box-shadow: 2px 2px 15px black;
 }
 
-.torgeternity.actor .window-content .actor-sheet nav.tabs {
+.actor-sheet nav.tabs {
   /*
             display: flex;
             flex-direction: column;
@@ -330,9 +343,10 @@ body {
   top: 400px;
   right: -5px;
   transform: rotateZ(90deg);
+  font-family: Berlin;
 }
 
-.torgeternity.actor .window-content .actor-sheet a.item {
+.actor-sheet a.item {
   min-width: 100px;
   transition: all 0.1s cubic-bezier(1, 0, 0, 1) 0.1s;
   color: white;
@@ -341,8 +355,8 @@ body {
   transform: translateX(-300px);
 }
 
-.torgeternity.actor .window-content .actor-sheet a.item:hover,
-.torgeternity.actor .window-content .actor-sheet a.item:active {
+.actor-sheet a.item:hover,
+.actor-sheet a.item:active {
   transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
   transform-origin: 50% 50% 0;
   text-shadow: 0 0 10px #10813f;
@@ -351,7 +365,7 @@ body {
   z-index: 0;
 }
 
-.torgeternity.actor .window-content .actor-sheet a.item.active {
+.actor-sheet a.item.active {
   transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
   transform-origin: 50% 50% 0;
   background-image: url(../images/active_tab_back.png);
@@ -359,36 +373,36 @@ body {
   z-index: 100;
 }
 
-.torgeternity.actor .window-content input[type="text"]:hover,
-.torgeternity.actor .window-content input[type="number"]:hover,
-.torgeternity.actor .window-content input[type="text"]:focus,
-.torgeternity.actor .window-content input[type="number"]:focus {
+.actor-sheet input[type="text"]:hover,
+.actor-sheet input[type="number"]:hover,
+.actor-sheet input[type="text"]:focus,
+.actor-sheet input[type="number"]:focus {
   box-shadow: 0 0 10px #4f523c inset;
 }
 
-.torgeternity.actor .window-content input[type="text"]::-moz-placeholder, .torgeternity.actor .window-content input[type="number"]::-moz-placeholder {
+.actor-sheet input[type="text"]::-moz-placeholder, .actor-sheet input[type="number"]::-moz-placeholder {
   color: #293131;
   text-shadow: 0px 0px 10px black;
 }
 
-.torgeternity.actor .window-content input[type="text"]:-ms-input-placeholder, .torgeternity.actor .window-content input[type="number"]:-ms-input-placeholder {
+.actor-sheet input[type="text"]:-ms-input-placeholder, .actor-sheet input[type="number"]:-ms-input-placeholder {
   color: #293131;
   text-shadow: 0px 0px 10px black;
 }
 
-.torgeternity.actor .window-content input[type="text"]::placeholder,
-.torgeternity.actor .window-content input[type="number"]::placeholder {
+.actor-sheet input[type="text"]::placeholder,
+.actor-sheet input[type="number"]::placeholder {
   color: #293131;
   text-shadow: 0px 0px 10px black;
 }
 
-.torgeternity.actor .window-content img {
+.actor-sheet img {
   border: none;
   flex: 0 0 60px;
   height: auto;
 }
 
-.torgeternity.actor .window-content h2 {
+.actor-sheet h2 {
   color: black;
   border: none;
   text-align: center;
@@ -396,7 +410,7 @@ body {
   text-shadow: 0px 0px 15px black;
 }
 
-.torgeternity.actor .window-content h1 {
+.actor-sheet h1 {
   color: black;
   border: none;
   text-align: center;
@@ -404,7 +418,7 @@ body {
   text-shadow: 0px 0px 15px black;
 }
 
-.torgeternity.actor .window-content h1 input {
+.actor-sheet h1 input {
   color: white;
   border: none;
   text-align: center;
@@ -412,13 +426,13 @@ body {
   text-shadow: 0px 0px 15px black;
 }
 
-.torgeternity.actor .window-content .dark {
+.actor-sheet .dark {
   background-color: rgba(0, 0, 0, 0.561);
   color: white;
 }
 
-.torgeternity.actor .window-content a.skill-roll:hover,
-.torgeternity.actor .window-content a.skill-roll:active {
+.actor-sheet a.skill-roll:hover,
+.actor-sheet a.skill-roll:active {
   -webkit-animation-duration: 0.3s;
   animation-duration: 0.3s;
   -webkit-animation-name: roll;
@@ -426,7 +440,7 @@ body {
   text-shadow: 0px 0px 10px #191e58;
 }
 
-.torgeternity.actor .window-content .char_image {
+.actor-sheet .char_image {
   border: solid 5px;
   -o-border-image: url(../images/separator.png) 20 round;
   border-image: url(../images/separator.png) 20 round;
@@ -435,35 +449,35 @@ body {
   transition: all 0.6s cubic-bezier(1, 0, 0, 1) 0.1s;
 }
 
-.torgeternity.actor .window-content .char_image:hover {
+.actor-sheet .char_image:hover {
   transform: scale(1.1);
 }
 
-.torgeternity.actor .window-content .sheet-header {
+.actor-sheet .sheet-header {
   grid-column: 1/9;
   grid-row: 1/2;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
 }
 
-.torgeternity.actor .window-content .sheet-header img {
-  max-width: 70%;
+.actor-sheet .sheet-header img {
+  max-width: 100%;
   height: auto;
 }
 
-.torgeternity.actor .window-content .sheet-header select {
+.actor-sheet .sheet-header select {
   border: none;
   border-bottom: solid;
   max-height: 20px;
 }
 
-.torgeternity.actor .window-content .sheet-header select:active,
-.torgeternity.actor .window-content .sheet-header select:focus {
+.actor-sheet .sheet-header select:active,
+.actor-sheet .sheet-header select:focus {
   box-shadow: 0 0 5px #0062ff;
 }
 
-.torgeternity.actor .window-content .sheet-header div {
+.actor-sheet .sheet-header div {
   max-height: 0.4em;
   display: flex;
   flex-direction: column;
@@ -471,7 +485,7 @@ body {
   margin-right: 10px;
 }
 
-.torgeternity.actor .window-content .sheet-header input[type="number"] {
+.actor-sheet .sheet-header input[type="number"] {
   border: none;
   text-align: center;
   width: 30px;
@@ -481,26 +495,26 @@ body {
   background-size: cover;
 }
 
-.torgeternity.actor .window-content .attributes {
+.actor-sheet .attributes {
   grid-column: 1/7;
   grid-row: 2/3;
 }
 
-.torgeternity.actor .window-content .attributes ul {
+.actor-sheet .attributes ul {
   font-family: Berlin;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
-.torgeternity.actor .window-content .attributes ul li.attribut-block {
+.actor-sheet .attributes ul li.attribut-block {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 
-.torgeternity.actor .window-content .attributes ul li.attribut-block input[type="number"] {
+.actor-sheet .attributes ul li.attribut-block input[type="number"] {
   border: none;
   text-align: center;
   width: 30px;
@@ -510,63 +524,63 @@ body {
   background-size: cover;
 }
 
-.torgeternity.actor .window-content .attributes ul li.attribut-block a {
+.actor-sheet .attributes ul li.attribut-block a {
   margin-left: auto;
   text-align: center;
 }
 
-.torgeternity.actor .window-content .skills {
+.actor-sheet .skills {
   grid-column: 1/5;
   grid-row: 3/7;
   overflow: scroll;
 }
 
-.torgeternity.actor .window-content .skills ul {
+.actor-sheet .skills ul {
   font-family: Berlin;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-.torgeternity.actor .window-content .skills ul li {
+.actor-sheet .skills ul li {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   border-bottom: 1px solid grey;
 }
 
-.torgeternity.actor .window-content .skills ul li input {
+.actor-sheet .skills ul li input {
   border: none;
   text-align: center;
   width: 18px;
   height: 18px;
 }
 
-.torgeternity.actor .window-content .skills ul li span {
+.actor-sheet .skills ul li span {
   width: 90%;
   text-align: center;
 }
 
-.torgeternity.actor .window-content .skills ul li a {
+.actor-sheet .skills ul li a {
   margin-left: auto;
   text-align: center;
 }
 
-.torgeternity.actor .window-content .perks {
+.actor-sheet .perks {
   grid-column: 5/9;
   grid-row: 5/7;
 }
 
-.torgeternity.actor .window-content .defense {
+.actor-sheet .defense {
   grid-column: 7/9;
   grid-row: 2/5;
 }
 
-.torgeternity.actor .window-content .defense input {
+.actor-sheet .defense input {
   width: 25%;
 }
 
-.torgeternity.actor .window-content .weapons {
+.actor-sheet .weapons {
   grid-column: 1/9;
   grid-row: 7/9;
 }
