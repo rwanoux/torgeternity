@@ -1,8 +1,7 @@
 const gulp = require('gulp');
 const prefix = require('gulp-autoprefixer');
-const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
-
+const zip = require('gulp-zip');
 /* ----------------------------------------- */
 /*  Compile Sass
 /* ----------------------------------------- */
@@ -14,6 +13,7 @@ function handleError(err) {
 }
 
 const SYSTEM_SCSS = ["scss/**/*.scss"];
+
 function compileScss() {
   // Configure options for sass output. For example, 'expanded' or 'nested'
   let options = {
@@ -22,7 +22,7 @@ function compileScss() {
   return gulp.src(SYSTEM_SCSS)
     .pipe(
       sass(options)
-        .on('error', handleError)
+      .on('error', handleError)
     )
     .pipe(prefix({
       cascade: false
@@ -48,3 +48,25 @@ exports.default = gulp.series(
   watchUpdates
 );
 exports.css = css;
+/* ----------------------------------------- */
+/*  zipping a release
+/* ----------------------------------------- */
+let releaseVersion= '0.99'
+let releaseFile='TorgEternityFVTTv'+releaseVersion+'.zip';
+  gulp.task('zip', function () {
+
+    return gulp.src([
+      //---here i take my whole folder  
+      '**/*.*',
+      //then exclude all of these 
+      '!node_modules/**',
+      '!scss/**',
+      '!release/**',
+      '!gulpfile.js',
+      '!merge-upstream.md',
+      '!package-lock.json',
+      '!package.json'
+    ])
+      .pipe(zip(releaseFile))
+      .pipe(gulp.dest('./release'))
+  })
