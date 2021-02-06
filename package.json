@@ -18,7 +18,7 @@
   "scripts": {
     "compile": "gulp css",
     "watch": "gulp",
-    "zip":"gulp zip"
+    "zip": "gulp zip"
   },
   "repository": {
     "type": "git",
